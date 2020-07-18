@@ -1,0 +1,24 @@
+{
+	"version": "2.0.0",
+	"presentation": {
+		"echo": true,
+		"reveal": "always",
+		"focus": true,
+		"panel": "shared",
+		"showReuseMessage": false,
+		"clear": false
+	},
+	"tasks": [
+		{
+			"label": "Run",
+			"type": "shell",
+			"command": "/usr/bin/python3",
+			"args": ["${file}"],
+			"promptOnClose": false,
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
