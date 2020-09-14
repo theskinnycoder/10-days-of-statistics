@@ -5,17 +5,17 @@ def mean(arr):
 
 def median(arr):
     n = len(arr)
-    arr.sort()
+    dummy = sorted(arr)
     if n & 1:
-        return float(arr[n // 2])
+        return float(dummy[n // 2])
     else:
-        return (arr[n // 2] + arr[(n // 2) - 1]) / 2.0
+        return (dummy[n // 2] + dummy[(n // 2) - 1]) / 2.0
 
 
 def mode(arr):
-    arr.sort()
+    dummy = sorted(arr)
     dictionary = {}
-    for elem in arr:
+    for elem in dummy:
         if elem in dictionary:
             dictionary[elem] += 1
         else:

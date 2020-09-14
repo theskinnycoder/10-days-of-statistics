@@ -1,4 +1,5 @@
-from utils import mean, median, mode, weighted_mean
+from utils import mean, median, mode
+from utils import weighted_mean
 
 if __name__ == '__main__':
     _ = int(input())
