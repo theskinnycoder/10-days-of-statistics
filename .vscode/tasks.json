@@ -12,12 +12,17 @@
 		{
 			"label": "Run",
 			"type": "shell",
-			"command": "C:\\Users\\rahul\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
-			"args": ["${file}"],
 			"promptOnClose": false,
+			"windows": {
+				"command": "C:\\Users\\rahul\\AppData\\Local\\Programs\\Python\\Python38\\python.exe"
+			},
 			"linux": {
 				"command": "/usr/bin/python3"
 			},
+			"osx": {
+				"command": "/usr/bin/python3"
+			},
+			"args": ["${file}"],
 			"group": {
 				"kind": "build",
 				"isDefault": true

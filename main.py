@@ -1,11 +1,16 @@
-from utils import mean, median, mode
-from utils import weighted_mean
+# %%
+def say_hello(name):
+    return f'Hello, {name}'
 
-if __name__ == '__main__':
-    _ = int(input())
-    arr = [int(x) for x in input().split()]
-    weights = list(map(int, input().split()))
-    print(f'{mean(arr):.1f}')
-    print(f'{weighted_mean(arr, weights):.1f}')
-    print(f'{median(arr):.1f}')
-    print(mode(arr))
+
+# %%
+print(say_hello('Rahul'))
+
+
+# %%
+arr = [5, 1, 4, 2, 3]
+for elem in arr:
+    print(elem ** 2)
+
+# %%
+print(list(map(lambda x: x ** 2, arr)))
