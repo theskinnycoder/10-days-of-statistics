@@ -1,98 +1,53 @@
-# STATISTICS: Day -1
+# **STATISTICS: Day 0**
 
-## **A) INSTALLING VSCODE :**
+## **1) Mean, Median, and Mode**
 
-1. If you're on **Windows** (_eww_):
+### **A) Intro and Conventions**
 
-   1. Visit [**VSCode**](https://code.visualstudio.com/).
-   1. Download the Windows-64 'Stable' version.
-   1. Follow the installation steps by running the downloaded file, and check the **ADD VSCode to PATH** option for sure.
+- Let **X** be a set of numbers, of length **n**. Hence, **x<sub>i</sub>** is the i<sup>th</sup> element in the set **X**.
 
-1. If you're on **Linux** (the Gods):
+- Let **W** be the set of weights of each element **x<sub>i</sub>** in **X**. Hence, **w<sub>i</sub>** is the i<sup>th</sup> element in the set **W**, which is the weight of **x<sub>i</sub>**.
 
-   1. Install using [**snap**](https://snapcraft.io/code). Choose your distro type in the list to install **snap**.
-   1. **snap** is a new global package-manager common to all distros.
+- We assume 0-based indexing in our set of elements.
 
-   ```bash
-   $ # For example, on Debain-based systems :
-   $ sudo apt update
-   $ sudo apt install snapd
-   $ sudo snap install code --classic
-   ```
+### **B) Mean**
 
-1. If you're on a **Mac** (Lucky you) :
+<!-- $$\mu = \frac{\sum_{i=0}^{n-1} {x_i}}{n}$$ -->
 
-   1. Visit [**VSCode**](https://code.visualstudio.com/).
-   2. Download the MacOS 'Stable' version.
-   3. Follow the installation steps by running the downloaded file (OR)
+<a href="https://www.codecogs.com/eqnedit.php?latex=\fn_cs&space;\LARGE&space;\mu&space;=&space;\frac{\sum_{i=0}^{n-1}&space;{x_i}}{n}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\fn_cs&space;\LARGE&space;\mu&space;=&space;\frac{\sum_{i=0}^{n-1}&space;{x_i}}{n}" title="\LARGE \mu = \frac{\sum_{i=0}^{n-1} {x_i}}{n}" /></a>
 
-   4. Install it using [**homebrew**](https://brew.sh/). It is a widely used package-manager on Mac.
+### **C) Median**
 
-   ```bash
-   $ # Install Brew :
-   $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-   ```
+<!-- $$
+Median =
+\begin{cases}
+ \left(\frac{n}{2}\right)^{th} \text{term} & \text{if $n$ is odd} \\[2ex]
+\frac{{\left(\frac{n}{2}\right)}^{th} \text{term} + {\left(\frac{n}{2}-1\right)}^{th}\text{term}}{2}  & \text{if $n$ is even}
+\end{cases}
+$$ -->
 
-   ```bash
-   $ # Install VSCode :
-   $ brew update
-   $ brew tap caskroom/cask
-   $ brew cask search visual-studio-code
-   $ brew cask install visual-studio-code
-   ```
+<a href="https://www.codecogs.com/eqnedit.php?latex=\fn_cs&space;\LARGE&space;Median&space;=&space;\begin{cases}&space;\left(\frac{n}{2}\right)^{th}&space;\text{term}&space;&&space;\text{if&space;$n$&space;is&space;odd}&space;\\[2ex]&space;\frac{{\left(\frac{n}{2}\right)}^{th}&space;\text{term}&space;&plus;&space;{\left(\frac{n}{2}-1\right)}^{th}\text{term}}{2}&space;&&space;\text{if&space;$n$&space;is&space;even}&space;\end{cases}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\fn_cs&space;\LARGE&space;Median&space;=&space;\begin{cases}&space;\left(\frac{n}{2}\right)^{th}&space;\text{term}&space;&&space;\text{if&space;$n$&space;is&space;odd}&space;\\[2ex]&space;\frac{{\left(\frac{n}{2}\right)}^{th}&space;\text{term}&space;&plus;&space;{\left(\frac{n}{2}-1\right)}^{th}\text{term}}{2}&space;&&space;\text{if&space;$n$&space;is&space;even}&space;\end{cases}" title="\LARGE Median = \begin{cases} \left(\frac{n}{2}\right)^{th} \text{term} & \text{if $n$ is odd} \\[2ex] \frac{{\left(\frac{n}{2}\right)}^{th} \text{term} + {\left(\frac{n}{2}-1\right)}^{th}\text{term}}{2} & \text{if $n$ is even} \end{cases}" /></a>
 
----
+### **D) Mode**
 
-## **B) INSTALLING PYTHON :**
+- The element(s) that occur(s) most frequently in a data set, is called as **Mode**.
 
-1. If you're on **Windows** :
+- A set is known as **multi-modal** if it has more than 1 mode.
 
-   1. Click this [**link**](https://www.python.org/downloads/windows/) to download.
-   1. Follow the installation steps by running the downloaded file, and check the **ADD Python to PATH** option for sure.
+## **2) Weighted Mean**
 
-1. If you're on **Linux** :
+<!-- $$\mu_w = \frac{\sum_{i=0}^{n-1} \left({x_i \times w_i}\right)}{\sum_{i=0}^{n-1}{w_i}}$$ -->
 
-   Install it using your distro's package manager.
+<a href="https://www.codecogs.com/eqnedit.php?latex=\fn_cs&space;\LARGE&space;\mu_w&space;=&space;\frac{\sum_{i=0}^{n-1}&space;\left({x_i&space;\times&space;w_i}\right)}{\sum_{i=0}^{n-1}{w_i}}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\fn_cs&space;\LARGE&space;\mu_w&space;=&space;\frac{\sum_{i=0}^{n-1}&space;\left({x_i&space;\times&space;w_i}\right)}{\sum_{i=0}^{n-1}{w_i}}" title="\LARGE \mu_w = \frac{\sum_{i=0}^{n-1} \left({x_i \times w_i}\right)}{\sum_{i=0}^{n-1}{w_i}}" /></a>
 
-   ```bash
-   $ # For example, on Debain-based systems :
-   $ sudo apt-get update
-   $ sudo apt-get install python3
-   ```
+## **3) Precision and Scale**
 
-1. If you're on a **Mac** :
+### **A) Precision**
 
-   Install it using **homebrew**.
+**_Precision_** refers to the number of significant digits in a number, as a total.
 
-   ```bash
-   brew search python
-   brew install python3
-   ```
+### **B) Scale**
 
----
+**_Scale_** refers to the number of significant digits in a number, but that are only to the right of the decimal point, i.e., in the fractional part.
 
-## **C) Get the boiler-plate and the completed code :**
-
-- Make sure you've [**git**](https://git-scm.com/) installed on your system.
-- The _**master**_ branch will have initial code, and each branch named as **_day-0_**, **_day-1_** etc will have that day's branch will have the completed code.
-- Clone the repo in your desired directory, to get the code :
-
-```bash
-# The dot is to clone the repo in the current directory.
-git clone https://github.com/theskinnycoder/python_crash_course.git .
-```
-
-- Checkout to the _**master**_ branch to get the initial code :
-
-```bash
-git checkout master
-```
-
-- Checkout to the **_day-x_** branch to get the completed code of **_day-x_** :
-
-```bash
-# For day-3's completed code
-git checkout day-3
-```
-
-> Happy Coding!
+> _**Happy Coding!**_
